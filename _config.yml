@@ -5,9 +5,9 @@
 # Site
 title: yuexing的随笔
 subtitle:
-description:
+description: 努力向前，做最好的自己，找到最对的人，一起看最美的风景。
 author: yuexing
-language:
+language: zh-Hans
 timezone:
 
 # URL
@@ -63,7 +63,7 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: yilia
+theme: next
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
