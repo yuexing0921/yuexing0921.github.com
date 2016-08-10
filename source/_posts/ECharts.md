@@ -1,7 +1,12 @@
 ---
 title: ECharts【初级】- 基础交互组件介绍
 date: 2016-08-08 20:21:27
+categories:
+- ECharts
 tags:
+- ECharts
+- 图表
+- 大数据
 ---
 #### 九大基础组件
 1. 图例组件 [legend](http://echarts.baidu.com/option.html#legend)
