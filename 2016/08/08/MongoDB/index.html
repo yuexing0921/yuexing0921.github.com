@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="ECharts,图表,大数据," />
+  <meta name="keywords" content="MongoDB," />
 
 
 
@@ -84,43 +84,43 @@
 
 
 
-<meta name="description" content="九大基础组件
-图例组件 legend
-标题组件 title
-时间线组件 timeline
-提示框组件 tooltip
-区域选择组件 brush
-地理坐标系组件 geo
-视觉映射组件 visualMap 
-雷达图坐标系组件 radar 
-数据区域缩放组件 dataZoom">
+<meta name="description" content="备份-归档方法一。无压缩内容
+
+mongodump -h dympxxx.com –archive=test.20160705.archive –db test
+
+mongorestore -h restroexxx.com, –archive=test.20160705.archive
+
+
+方法二。压缩方式
+
+mongodump -h dympxxx.com –gzip –archive=tes">
 <meta property="og:type" content="article">
-<meta property="og:title" content="ECharts【初级】- 基础交互组件介绍">
-<meta property="og:url" content="https://yuexing0921.github.io/2016/08/08/ECharts/index.html">
+<meta property="og:title" content="MongoDB 备份-归档命令">
+<meta property="og:url" content="https://yuexing0921.github.io/2016/08/08/MongoDB/index.html">
 <meta property="og:site_name" content="yuexing的随笔">
-<meta property="og:description" content="九大基础组件
-图例组件 legend
-标题组件 title
-时间线组件 timeline
-提示框组件 tooltip
-区域选择组件 brush
-地理坐标系组件 geo
-视觉映射组件 visualMap 
-雷达图坐标系组件 radar 
-数据区域缩放组件 dataZoom">
-<meta property="og:updated_time" content="2016-08-09T10:22:09.828Z">
+<meta property="og:description" content="备份-归档方法一。无压缩内容
+
+mongodump -h dympxxx.com –archive=test.20160705.archive –db test
+
+mongorestore -h restroexxx.com, –archive=test.20160705.archive
+
+
+方法二。压缩方式
+
+mongodump -h dympxxx.com –gzip –archive=tes">
+<meta property="og:updated_time" content="2016-08-11T13:12:36.942Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ECharts【初级】- 基础交互组件介绍">
-<meta name="twitter:description" content="九大基础组件
-图例组件 legend
-标题组件 title
-时间线组件 timeline
-提示框组件 tooltip
-区域选择组件 brush
-地理坐标系组件 geo
-视觉映射组件 visualMap 
-雷达图坐标系组件 radar 
-数据区域缩放组件 dataZoom">
+<meta name="twitter:title" content="MongoDB 备份-归档命令">
+<meta name="twitter:description" content="备份-归档方法一。无压缩内容
+
+mongodump -h dympxxx.com –archive=test.20160705.archive –db test
+
+mongorestore -h restroexxx.com, –archive=test.20160705.archive
+
+
+方法二。压缩方式
+
+mongodump -h dympxxx.com –gzip –archive=tes">
 
 
 
@@ -141,9 +141,9 @@
 
 
 
-  <link rel="canonical" href="https://yuexing0921.github.io/2016/08/08/ECharts/"/>
+  <link rel="canonical" href="https://yuexing0921.github.io/2016/08/08/MongoDB/"/>
 
-  <title> ECharts【初级】- 基础交互组件介绍 | yuexing的随笔 </title>
+  <title> MongoDB 备份-归档命令 | yuexing的随笔 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -273,7 +273,7 @@
             
             
               
-                ECharts【初级】- 基础交互组件介绍
+                MongoDB 备份-归档命令
               
             
           </h1>
@@ -299,8 +299,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/ECharts/" itemprop="url" rel="index">
-                    <span itemprop="name">ECharts</span>
+                  <a href="/categories/MongoDB/" itemprop="url" rel="index">
+                    <span itemprop="name">MongoDB</span>
                   </a>
                 </span>
 
@@ -332,17 +332,24 @@
       
 
       
-        <h4 id="九大基础组件"><a href="#九大基础组件" class="headerlink" title="九大基础组件"></a>九大基础组件</h4><ol>
-<li>图例组件 <a href="http://echarts.baidu.com/option.html#legend" target="_blank" rel="external">legend</a></li>
-<li>标题组件 <a href="http://echarts.baidu.com/option.html#title" target="_blank" rel="external">title</a></li>
-<li>时间线组件 <a href="http://echarts.baidu.com/option.html#timeline" target="_blank" rel="external">timeline</a></li>
-<li>提示框组件 <a href="http://echarts.baidu.com/option.html#tooltip" target="_blank" rel="external">tooltip</a></li>
-<li>区域选择组件 <a href="http://echarts.baidu.com/option.html#brush" target="_blank" rel="external">brush</a></li>
-<li>地理坐标系组件 <a href="http://echarts.baidu.com/option.html#geo" target="_blank" rel="external">geo</a></li>
-<li>视觉映射组件 <a href="http://echarts.baidu.com/option.html#visualMap" target="_blank" rel="external">visualMap </a></li>
-<li>雷达图坐标系组件 <a href="http://echarts.baidu.com/option.html#radar" target="_blank" rel="external">radar </a></li>
-<li>数据区域缩放组件 <a href="http://echarts.baidu.com/option.html#dataZoom" target="_blank" rel="external">dataZoom</a></li>
+        <h4 id="备份-归档"><a href="#备份-归档" class="headerlink" title="备份-归档"></a>备份-归档</h4><p>方法一。无压缩内容</p>
+<ol>
+<li><p>mongodump -h dympxxx.com –archive=test.20160705.archive –db test</p>
+</li>
+<li><p>mongorestore -h restroexxx.com, –archive=test.20160705.archive</p>
+</li>
 </ol>
+<p>方法二。压缩方式</p>
+<ol>
+<li><p>mongodump -h dympxxx.com –gzip –archive=test.20160705.gz –db test</p>
+</li>
+<li><p>mongorestore -h restroexxx.com –gzip –archive=test.20160705.gz </p>
+</li>
+</ol>
+<p>方法三。一行命令搞定备份和归档<br>mongodump -h dympxxx.com –archive –db test –port 27017 | mongorestore  -h restroexxx.com  –archive –port 27018</p>
+<h6 id="官方文档："><a href="#官方文档：" class="headerlink" title="官方文档："></a>官方文档：</h6><blockquote>
+<p>mongodump<br><a href="https://docs.mongodb.com/manual/reference/program/mongodump/" target="_blank" rel="external">https://docs.mongodb.com/manual/reference/program/mongodump/</a><br>mongorestore<br><a href="https://docs.mongodb.com/manual/reference/program/mongorestore/" target="_blank" rel="external">https://docs.mongodb.com/manual/reference/program/mongorestore/</a></p>
+</blockquote>
 
       
     </div>
@@ -365,11 +372,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/ECharts/" rel="tag">#ECharts</a>
-          
-            <a href="/tags/图表/" rel="tag">#图表</a>
-          
-            <a href="/tags/大数据/" rel="tag">#大数据</a>
+            <a href="/tags/MongoDB/" rel="tag">#MongoDB</a>
           
         </div>
       
@@ -378,13 +381,17 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/08/08/MongoDB/" rel="next" title="MongoDB 备份-归档命令">
-                <i class="fa fa-chevron-left"></i> MongoDB 备份-归档命令
+              <a href="/2016/08/06/hello-world/" rel="next" title="Hello World">
+                <i class="fa fa-chevron-left"></i> Hello World
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/08/08/ECharts/" rel="prev" title="ECharts【初级】- 基础交互组件介绍">
+                ECharts【初级】- 基础交互组件介绍 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -498,7 +505,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#九大基础组件"><span class="nav-number">1.</span> <span class="nav-text">九大基础组件</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#备份-归档"><span class="nav-number">1.</span> <span class="nav-text">备份-归档</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#官方文档："><span class="nav-number">1.0.1.</span> <span class="nav-text">官方文档：</span></a></li></ol></li></ol></li></ol></div>
             
           </div>
         </section>
