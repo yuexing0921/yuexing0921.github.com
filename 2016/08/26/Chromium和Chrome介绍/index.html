@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="MongoDB," />
+  <meta name="keywords" content="WebKit," />
 
 
 
@@ -84,25 +84,25 @@
 
 
 
-<meta name="description" content="备份-归档方法一。无压缩内容
-12mongodump -h dympxxx.com --archive=test.20160705.archive --db testmongorestore -h restroexxx.com, --archive=test.20160705.archive
-方法二。压缩方式
-12mongodump -h dympxxx.com --gzip --archive=">
+<meta name="description" content="原文地址：http://blog.csdn.net/milado_nju/article/details/7216067
+备注：对原文做了一定程度删减。
+
+WebKit前身是KDE的KHTML和KJS，是一个渲染引擎，不是一个浏览器，也不想成为浏览器第一是WebCore，其中包含了对HTML，CSS等很多W3C规范的实现；第二部分就是狭义上的WebKit，它主要是各个平台的的移植并提供相对应的W">
 <meta property="og:type" content="article">
-<meta property="og:title" content="MongoDB 备份-归档命令">
-<meta property="og:url" content="https://yuexing0921.github.io/2016/08/09/MongoDB/index.html">
+<meta property="og:title" content="WebKit, WebKit2,Blink Chromium和Chrome介绍">
+<meta property="og:url" content="https://yuexing0921.github.io/2016/08/26/Chromium和Chrome介绍/index.html">
 <meta property="og:site_name" content="yuexing的随笔">
-<meta property="og:description" content="备份-归档方法一。无压缩内容
-12mongodump -h dympxxx.com --archive=test.20160705.archive --db testmongorestore -h restroexxx.com, --archive=test.20160705.archive
-方法二。压缩方式
-12mongodump -h dympxxx.com --gzip --archive=">
-<meta property="og:updated_time" content="2016-08-11T13:16:36.373Z">
+<meta property="og:description" content="原文地址：http://blog.csdn.net/milado_nju/article/details/7216067
+备注：对原文做了一定程度删减。
+
+WebKit前身是KDE的KHTML和KJS，是一个渲染引擎，不是一个浏览器，也不想成为浏览器第一是WebCore，其中包含了对HTML，CSS等很多W3C规范的实现；第二部分就是狭义上的WebKit，它主要是各个平台的的移植并提供相对应的W">
+<meta property="og:updated_time" content="2016-08-26T07:45:50.187Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="MongoDB 备份-归档命令">
-<meta name="twitter:description" content="备份-归档方法一。无压缩内容
-12mongodump -h dympxxx.com --archive=test.20160705.archive --db testmongorestore -h restroexxx.com, --archive=test.20160705.archive
-方法二。压缩方式
-12mongodump -h dympxxx.com --gzip --archive=">
+<meta name="twitter:title" content="WebKit, WebKit2,Blink Chromium和Chrome介绍">
+<meta name="twitter:description" content="原文地址：http://blog.csdn.net/milado_nju/article/details/7216067
+备注：对原文做了一定程度删减。
+
+WebKit前身是KDE的KHTML和KJS，是一个渲染引擎，不是一个浏览器，也不想成为浏览器第一是WebCore，其中包含了对HTML，CSS等很多W3C规范的实现；第二部分就是狭义上的WebKit，它主要是各个平台的的移植并提供相对应的W">
 
 
 
@@ -123,9 +123,9 @@
 
 
 
-  <link rel="canonical" href="https://yuexing0921.github.io/2016/08/09/MongoDB/"/>
+  <link rel="canonical" href="https://yuexing0921.github.io/2016/08/26/Chromium和Chrome介绍/"/>
 
-  <title> MongoDB 备份-归档命令 | yuexing的随笔 </title>
+  <title> WebKit, WebKit2,Blink Chromium和Chrome介绍 | yuexing的随笔 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -255,7 +255,7 @@
             
             
               
-                MongoDB 备份-归档命令
+                WebKit, WebKit2,Blink Chromium和Chrome介绍
               
             
           </h1>
@@ -267,30 +267,11 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-08-09T21:21:27+08:00" content="2016-08-09">
-              2016-08-09
+            <time itemprop="dateCreated" datetime="2016-08-26T15:45:06+08:00" content="2016-08-26">
+              2016-08-26
             </time>
           </span>
 
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/MongoDB/" itemprop="url" rel="index">
-                    <span itemprop="name">MongoDB</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
           
 
           
@@ -314,15 +295,15 @@
       
 
       
-        <h4 id="备份-归档"><a href="#备份-归档" class="headerlink" title="备份-归档"></a>备份-归档</h4><p>方法一。无压缩内容</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">mongodump -h dympxxx.com --archive=test.20160705.archive --db test</div><div class="line">mongorestore -h restroexxx.com, --archive=test.20160705.archive</div></pre></td></tr></table></figure>
-<p>方法二。压缩方式</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">mongodump -h dympxxx.com --gzip --archive=test.20160705.gz --db test</div><div class="line">mongorestore -h restroexxx.com --gzip --archive=test.20160705.gz</div></pre></td></tr></table></figure>
-<p>也可以一行命令搞定</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mongodump -h dympxxx.com --archive --db test --port 27017 | mongorestore  -h restroexxx.com  --archive --port 27018</div></pre></td></tr></table></figure>
-<h6 id="官方文档："><a href="#官方文档：" class="headerlink" title="官方文档："></a>官方文档：</h6><blockquote>
-<p>mongodump<br><a href="https://docs.mongodb.com/manual/reference/program/mongodump/" target="_blank" rel="external">https://docs.mongodb.com/manual/reference/program/mongodump/</a><br>mongorestore<br><a href="https://docs.mongodb.com/manual/reference/program/mongorestore/" target="_blank" rel="external">https://docs.mongodb.com/manual/reference/program/mongorestore/</a></p>
+        <blockquote>
+<p>原文地址：<a href="http://blog.csdn.net/milado_nju/article/details/7216067" target="_blank" rel="external">http://blog.csdn.net/milado_nju/article/details/7216067</a></p>
+<p>备注：对原文做了一定程度删减。</p>
 </blockquote>
+<h3 id="WebKit"><a href="#WebKit" class="headerlink" title="WebKit"></a>WebKit</h3><p>前身是KDE的KHTML和KJS，是一个渲染引擎，不是一个浏览器，也不想成为浏览器<br>第一是WebCore，其中包含了对HTML，CSS等很多W3C规范的实现；第二部分就是狭义上的WebKit，它主要是各个平台的的移植并提供相对应的Web接口，也就是WebView或者类似WebView，这些接口提供操作和显示网页的能力。</p>
+<h3 id="WebKit2"><a href="#WebKit2" class="headerlink" title="WebKit2"></a>WebKit2</h3><p>它不是WebKit简单的第二个版本，它是一个新的API层，其最主要的变化在于将网页的渲染置于单独的进程，而接口层则在另外一个进程，它们之间通过IPC来通讯。对于接口的调用者来说，中间的IPC和底下的实现是透明的，这样做的好处有很多，一个很明显的好处是，当网页的渲染出现问题时，不会阻碍Web接口的调用者进程，这会在很大程度上解决或者帮助解决浏览器或者这些调用者的稳定性和安全性等问题</p>
+<h3 id="Blink"><a href="#Blink" class="headerlink" title="Blink"></a>Blink</h3><p>Google因为开发思想和原来的Webkit2开发社区产生了冲突，所以就脱离了Webkit项目，成立了Blink项目，但是不是一个全新的引擎，目前就是从WebKit直接复制出一个版本出来，然后将与chromium无关的Ports全部移除掉，将代码结构重新整理,不是一个全新的渲染引擎</p>
+<h3 id="Chromium"><a href="#Chromium" class="headerlink" title="Chromium"></a>Chromium</h3><p>一个建立在WebKit之上的浏览器<strong>开源项目</strong>，由Google发起的。该项目被创建以来发展迅速，很多先进的技术被采用，如跨进程模型，沙箱模型等等。同时，很多新的规范被支持，例如WebGL，Canvas2D，CSS3以及其他很多的HTML5特性，基本上每天你都可以看到它的变化，它的版本升级很快。在性能方面，其也备受称赞，包括快速启动，网页加载迅速等。</p>
+<h3 id="Chrome"><a href="#Chrome" class="headerlink" title="Chrome"></a>Chrome</h3><p>Google公司的浏览器产品,它基于chromium开源项目，一般选择稳定的版本作为它的基础，它和chromium的不同点在于chromium是开源试验场，会尝试很多新的东西，当这些东西稳定之后，chrome才会集成进来，这也就是说chrome的版本会落后于chromium。<br>chrome还会整合Google的很多服务， 最后chrome还会有自动更新的功能，这也是chromium所没有的。</p>
 
       
     </div>
@@ -345,7 +326,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/MongoDB/" rel="tag">#MongoDB</a>
+            <a href="/tags/WebKit/" rel="tag">#WebKit</a>
           
         </div>
       
@@ -354,17 +335,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/08/08/ECharts/" rel="next" title="ECharts【初级】- 基础交互组件介绍">
-                <i class="fa fa-chevron-left"></i> ECharts【初级】- 基础交互组件介绍
+              <a href="/2016/08/16/javascript-异步编程的四种方式/" rel="next" title="javascript 异步编程的四种方式">
+                <i class="fa fa-chevron-left"></i> javascript 异步编程的四种方式
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/08/16/javascript-异步编程的四种方式/" rel="prev" title="javascript 异步编程的四种方式">
-                javascript 异步编程的四种方式 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -478,7 +455,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#备份-归档"><span class="nav-number">1.</span> <span class="nav-text">备份-归档</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#官方文档："><span class="nav-number">1.0.1.</span> <span class="nav-text">官方文档：</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#WebKit"><span class="nav-number">1.</span> <span class="nav-text">WebKit</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#WebKit2"><span class="nav-number">2.</span> <span class="nav-text">WebKit2</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Blink"><span class="nav-number">3.</span> <span class="nav-text">Blink</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Chromium"><span class="nav-number">4.</span> <span class="nav-text">Chromium</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Chrome"><span class="nav-number">5.</span> <span class="nav-text">Chrome</span></a></li></ol></div>
             
           </div>
         </section>
