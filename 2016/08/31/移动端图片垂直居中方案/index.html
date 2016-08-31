@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="WebKit," />
+  <meta name="keywords" content="flexbox," />
 
 
 
@@ -84,25 +84,22 @@
 
 
 
-<meta name="description" content="原文地址：http://blog.csdn.net/milado_nju/article/details/7216067
-备注：对原文做了一定程度删减。
-
-WebKit前身是KDE的KHTML和KJS，是一个渲染引擎，不是一个浏览器，也不想成为浏览器第一是WebCore，其中包含了对HTML，CSS等很多W3C规范的实现；第二部分就是狭义上的WebKit，它主要是各个平台的的移植并提供相对应的W">
+<meta name="description" content="移动端如何做图片垂直居中？开发过程中，PC那套适配方案放在移动端会有很多兼容性问题，甚至的有的时候需要用js代码去动态调整css，很不方便。
+同事建议用flexbox，参考了flexbox的实现方案，很强大，看完http://caibaojian.com/flexbox-guide.html这个教程基本上就会了
+当然具体实现过程，发现有很多浏览器的标准是不一样的，所以需要做一定程度的兼容，gith">
 <meta property="og:type" content="article">
-<meta property="og:title" content="WebKit, WebKit2,Blink Chromium和Chrome介绍">
-<meta property="og:url" content="https://yuexing0921.github.io/2016/08/26/Chromium和Chrome介绍/index.html">
+<meta property="og:title" content="移动端图片垂直居中方案">
+<meta property="og:url" content="https://yuexing0921.github.io/2016/08/31/移动端图片垂直居中方案/index.html">
 <meta property="og:site_name" content="yuexing的随笔">
-<meta property="og:description" content="原文地址：http://blog.csdn.net/milado_nju/article/details/7216067
-备注：对原文做了一定程度删减。
-
-WebKit前身是KDE的KHTML和KJS，是一个渲染引擎，不是一个浏览器，也不想成为浏览器第一是WebCore，其中包含了对HTML，CSS等很多W3C规范的实现；第二部分就是狭义上的WebKit，它主要是各个平台的的移植并提供相对应的W">
-<meta property="og:updated_time" content="2016-08-26T07:53:14.478Z">
+<meta property="og:description" content="移动端如何做图片垂直居中？开发过程中，PC那套适配方案放在移动端会有很多兼容性问题，甚至的有的时候需要用js代码去动态调整css，很不方便。
+同事建议用flexbox，参考了flexbox的实现方案，很强大，看完http://caibaojian.com/flexbox-guide.html这个教程基本上就会了
+当然具体实现过程，发现有很多浏览器的标准是不一样的，所以需要做一定程度的兼容，gith">
+<meta property="og:updated_time" content="2016-08-31T05:20:34.933Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="WebKit, WebKit2,Blink Chromium和Chrome介绍">
-<meta name="twitter:description" content="原文地址：http://blog.csdn.net/milado_nju/article/details/7216067
-备注：对原文做了一定程度删减。
-
-WebKit前身是KDE的KHTML和KJS，是一个渲染引擎，不是一个浏览器，也不想成为浏览器第一是WebCore，其中包含了对HTML，CSS等很多W3C规范的实现；第二部分就是狭义上的WebKit，它主要是各个平台的的移植并提供相对应的W">
+<meta name="twitter:title" content="移动端图片垂直居中方案">
+<meta name="twitter:description" content="移动端如何做图片垂直居中？开发过程中，PC那套适配方案放在移动端会有很多兼容性问题，甚至的有的时候需要用js代码去动态调整css，很不方便。
+同事建议用flexbox，参考了flexbox的实现方案，很强大，看完http://caibaojian.com/flexbox-guide.html这个教程基本上就会了
+当然具体实现过程，发现有很多浏览器的标准是不一样的，所以需要做一定程度的兼容，gith">
 
 
 
@@ -123,9 +120,9 @@ WebKit前身是KDE的KHTML和KJS，是一个渲染引擎，不是一个浏览器
 
 
 
-  <link rel="canonical" href="https://yuexing0921.github.io/2016/08/26/Chromium和Chrome介绍/"/>
+  <link rel="canonical" href="https://yuexing0921.github.io/2016/08/31/移动端图片垂直居中方案/"/>
 
-  <title> WebKit, WebKit2,Blink Chromium和Chrome介绍 | yuexing的随笔 </title>
+  <title> 移动端图片垂直居中方案 | yuexing的随笔 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -255,7 +252,7 @@ WebKit前身是KDE的KHTML和KJS，是一个渲染引擎，不是一个浏览器
             
             
               
-                WebKit, WebKit2,Blink Chromium和Chrome介绍
+                移动端图片垂直居中方案
               
             
           </h1>
@@ -267,8 +264,8 @@ WebKit前身是KDE的KHTML和KJS，是一个渲染引擎，不是一个浏览器
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-08-26T15:45:06+08:00" content="2016-08-26">
-              2016-08-26
+            <time itemprop="dateCreated" datetime="2016-08-31T11:25:02+08:00" content="2016-08-31">
+              2016-08-31
             </time>
           </span>
 
@@ -281,8 +278,8 @@ WebKit前身是KDE的KHTML和KJS，是一个渲染引擎，不是一个浏览器
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/WebKit/" itemprop="url" rel="index">
-                    <span itemprop="name">WebKit</span>
+                  <a href="/categories/CSS/" itemprop="url" rel="index">
+                    <span itemprop="name">CSS</span>
                   </a>
                 </span>
 
@@ -314,15 +311,20 @@ WebKit前身是KDE的KHTML和KJS，是一个渲染引擎，不是一个浏览器
       
 
       
-        <blockquote>
-<p>原文地址：<a href="http://blog.csdn.net/milado_nju/article/details/7216067" target="_blank" rel="external">http://blog.csdn.net/milado_nju/article/details/7216067</a></p>
-<p>备注：对原文做了一定程度删减。</p>
+        <h3 id="移动端如何做图片垂直居中？"><a href="#移动端如何做图片垂直居中？" class="headerlink" title="移动端如何做图片垂直居中？"></a>移动端如何做图片垂直居中？</h3><p>开发过程中，PC那套适配方案放在移动端会有很多兼容性问题，甚至的有的时候需要用js代码去动态调整css，很不方便。</p>
+<p>同事建议用flexbox，参考了flexbox的实现方案，很强大，看完<a href="http://caibaojian.com/flexbox-guide.html" target="_blank" rel="external">http://caibaojian.com/flexbox-guide.html</a>这个教程基本上就会了</p>
+<p>当然具体实现过程，发现有很多浏览器的标准是不一样的，所以需要做一定程度的兼容，github搜索了下，国外已经有哥们实现了。</p>
+<ul>
+<li>[x] sass版本：<a href="https://github.com/mastastealth/sass-flex-mixin" target="_blank" rel="external">https://github.com/mastastealth/sass-flex-mixin</a></li>
+<li>[x] less版本：<a href="https://github.com/ProLoser/Flexbox.less" target="_blank" rel="external">https://github.com/ProLoser/Flexbox.less</a></li>
+</ul>
+<p>下面贴个人常用的scss代码，很方便</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line">//scss mixin</div><div class="line">@mixin img-wap-ctn($width:auto,$height:$width,$containerSelect:'&gt;div',$imgSelect:img)&#123;</div><div class="line">    @include size($width,$height);</div><div class="line">    //为了兼容低版本的移动浏览器（比如UC，魅族自带浏览器。。。）</div><div class="line">    #&#123;$containerSelect&#125; &#123;</div><div class="line">        @include size(100%);</div><div class="line">        @include flexbox();</div><div class="line">        @include justify-content(space-between);</div><div class="line">        @include align-items(center);</div><div class="line">        #&#123;$imgSelect&#125;&#123;</div><div class="line">            max-width:100%;max-height:100%;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">//html代码</div><div class="line">&lt;div class="img"&gt;</div><div class="line">    &lt;div&gt;</div><div class="line">        &lt;img src="" alt=""&gt;</div><div class="line">    &lt;/div&gt;</div><div class="line">&lt;/div&gt;</div><div class="line"></div><div class="line">//scss代码</div><div class="line">.img&#123;@include img-wap-ctn(240px);&#125;</div></pre></td></tr></table></figure>
+<p>上面就是个人常用mixin，很方便，简单明了。</p>
+<blockquote>
+<p>中文flexbox入门教程 <a href="http://caibaojian.com/flexbox-guide.html" target="_blank" rel="external">http://caibaojian.com/flexbox-guide.html</a></p>
+<p>github细化教程，有中文翻译<a href="https://github.com/philipwalton/solved-by-flexbox" target="_blank" rel="external">https://github.com/philipwalton/solved-by-flexbox</a></p>
 </blockquote>
-<h3 id="WebKit"><a href="#WebKit" class="headerlink" title="WebKit"></a>WebKit</h3><p>前身是KDE的KHTML和KJS，是一个渲染引擎，不是一个浏览器，也不想成为浏览器<br>第一是WebCore，其中包含了对HTML，CSS等很多W3C规范的实现；第二部分就是狭义上的WebKit，它主要是各个平台的的移植并提供相对应的Web接口，也就是WebView或者类似WebView，这些接口提供操作和显示网页的能力。</p>
-<h3 id="WebKit2"><a href="#WebKit2" class="headerlink" title="WebKit2"></a>WebKit2</h3><p>它不是WebKit简单的第二个版本，它是一个新的API层，其最主要的变化在于将网页的渲染置于单独的进程，而接口层则在另外一个进程，它们之间通过IPC来通讯。对于接口的调用者来说，中间的IPC和底下的实现是透明的，这样做的好处有很多，一个很明显的好处是，当网页的渲染出现问题时，不会阻碍Web接口的调用者进程，这会在很大程度上解决或者帮助解决浏览器或者这些调用者的稳定性和安全性等问题</p>
-<h3 id="Blink"><a href="#Blink" class="headerlink" title="Blink"></a>Blink</h3><p>Google因为开发思想和原来的Webkit2开发社区产生了冲突，所以就脱离了Webkit项目，成立了Blink项目，但是不是一个全新的引擎，目前就是从WebKit直接复制出一个版本出来，然后将与chromium无关的Ports全部移除掉，将代码结构重新整理,不是一个全新的渲染引擎</p>
-<h3 id="Chromium"><a href="#Chromium" class="headerlink" title="Chromium"></a>Chromium</h3><p>一个建立在WebKit之上的浏览器<strong>开源项目</strong>，由Google发起的。该项目被创建以来发展迅速，很多先进的技术被采用，如跨进程模型，沙箱模型等等。同时，很多新的规范被支持，例如WebGL，Canvas2D，CSS3以及其他很多的HTML5特性，基本上每天你都可以看到它的变化，它的版本升级很快。在性能方面，其也备受称赞，包括快速启动，网页加载迅速等。</p>
-<h3 id="Chrome"><a href="#Chrome" class="headerlink" title="Chrome"></a>Chrome</h3><p>Google公司的浏览器产品,它基于chromium开源项目，一般选择稳定的版本作为它的基础，它和chromium的不同点在于chromium是开源试验场，会尝试很多新的东西，当这些东西稳定之后，chrome才会集成进来，这也就是说chrome的版本会落后于chromium。<br>chrome还会整合Google的很多服务， 最后chrome还会有自动更新的功能，这也是chromium所没有的。</p>
 
       
     </div>
@@ -345,7 +347,7 @@ WebKit前身是KDE的KHTML和KJS，是一个渲染引擎，不是一个浏览器
       
         <div class="post-tags">
           
-            <a href="/tags/WebKit/" rel="tag">#WebKit</a>
+            <a href="/tags/flexbox/" rel="tag">#flexbox</a>
           
         </div>
       
@@ -354,17 +356,13 @@ WebKit前身是KDE的KHTML和KJS，是一个渲染引擎，不是一个浏览器
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/08/09/MongoDB/" rel="next" title="MongoDB 备份-归档命令">
-                <i class="fa fa-chevron-left"></i> MongoDB 备份-归档命令
+              <a href="/2016/08/26/Chromium和Chrome介绍/" rel="next" title="WebKit, WebKit2,Blink Chromium和Chrome介绍">
+                <i class="fa fa-chevron-left"></i> WebKit, WebKit2,Blink Chromium和Chrome介绍
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/08/31/移动端图片垂直居中方案/" rel="prev" title="移动端图片垂直居中方案">
-                移动端图片垂直居中方案 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -478,7 +476,7 @@ WebKit前身是KDE的KHTML和KJS，是一个渲染引擎，不是一个浏览器
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#WebKit"><span class="nav-number">1.</span> <span class="nav-text">WebKit</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#WebKit2"><span class="nav-number">2.</span> <span class="nav-text">WebKit2</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Blink"><span class="nav-number">3.</span> <span class="nav-text">Blink</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Chromium"><span class="nav-number">4.</span> <span class="nav-text">Chromium</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Chrome"><span class="nav-number">5.</span> <span class="nav-text">Chrome</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#移动端如何做图片垂直居中？"><span class="nav-number">1.</span> <span class="nav-text">移动端如何做图片垂直居中？</span></a></li></ol></div>
             
           </div>
         </section>
