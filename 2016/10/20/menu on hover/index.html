@@ -1,0 +1,603 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="动态menu," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="前端开发经常碰到动态menu的开发，比如说，列表页，搜索下拉框等等。。。鼠标hover第一层，右边弹出第二层，再hover第二层，弹出第三层，依次类推。需求很简单，当然代码也简单
+123456789101112131415161718192021222324252627282930313233343536373839404142&amp;lt;ul &amp;gt;&amp;lt;li &amp;gt;  &amp;lt;a href=">
+<meta property="og:type" content="article">
+<meta property="og:title" content="鼠标hover弹menu">
+<meta property="og:url" content="https://yuexing0921.github.io/2016/10/20/menu on hover/index.html">
+<meta property="og:site_name" content="yuexing的随笔">
+<meta property="og:description" content="前端开发经常碰到动态menu的开发，比如说，列表页，搜索下拉框等等。。。鼠标hover第一层，右边弹出第二层，再hover第二层，弹出第三层，依次类推。需求很简单，当然代码也简单
+123456789101112131415161718192021222324252627282930313233343536373839404142&amp;lt;ul &amp;gt;&amp;lt;li &amp;gt;  &amp;lt;a href=">
+<meta property="og:updated_time" content="2016-10-20T08:48:08.614Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="鼠标hover弹menu">
+<meta name="twitter:description" content="前端开发经常碰到动态menu的开发，比如说，列表页，搜索下拉框等等。。。鼠标hover第一层，右边弹出第二层，再hover第二层，弹出第三层，依次类推。需求很简单，当然代码也简单
+123456789101112131415161718192021222324252627282930313233343536373839404142&amp;lt;ul &amp;gt;&amp;lt;li &amp;gt;  &amp;lt;a href=">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="https://yuexing0921.github.io/2016/10/20/menu on hover/"/>
+
+  <title> 鼠标hover弹menu | yuexing的随笔 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">yuexing的随笔</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle"></p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-echarts">
+          <a href="/EChart" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            menu.echarts
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                鼠标hover弹menu
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-10-20T16:21:27+08:00" content="2016-10-20">
+              2016-10-20
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/menu/" itemprop="url" rel="index">
+                    <span itemprop="name">menu</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h5 id="前端开发经常碰到动态menu的开发，比如说，列表页，搜索下拉框等等。。。"><a href="#前端开发经常碰到动态menu的开发，比如说，列表页，搜索下拉框等等。。。" class="headerlink" title="前端开发经常碰到动态menu的开发，比如说，列表页，搜索下拉框等等。。。"></a>前端开发经常碰到动态menu的开发，比如说，列表页，搜索下拉框等等。。。</h5><h6 id="鼠标hover第一层，右边弹出第二层，再hover第二层，弹出第三层，依次类推。"><a href="#鼠标hover第一层，右边弹出第二层，再hover第二层，弹出第三层，依次类推。" class="headerlink" title="鼠标hover第一层，右边弹出第二层，再hover第二层，弹出第三层，依次类推。"></a>鼠标hover第一层，右边弹出第二层，再hover第二层，弹出第三层，依次类推。</h6><p>需求很简单，当然代码也简单</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">ul</span> &gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">li</span> &gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">""</span>&gt;</span>一级菜单<span class="tag">&lt;/<span class="name">a</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">ul</span> &gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">li</span>&gt;</span></div><div class="line">	  <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span> <span class="attr">target</span>=<span class="string">"_blank"</span>&gt;</span>二级菜单<span class="tag">&lt;/<span class="name">a</span>&gt;</span></div><div class="line">	  <span class="tag">&lt;<span class="name">ul</span> &gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">li</span>&gt;</span></div><div class="line">		  <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span> <span class="attr">target</span>=<span class="string">"_blank"</span>&gt;</span>三级菜单<span class="tag">&lt;/<span class="name">a</span>&gt;</span></div><div class="line">		  <span class="tag">&lt;<span class="name">ul</span> &gt;</span></div><div class="line">			<span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span> <span class="attr">target</span>=<span class="string">"_blank"</span>&gt;</span>四级菜单<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">		  <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></div><div class="line">		<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">	  <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></div><div class="line">	<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">li</span>&gt;</span></div><div class="line">	  <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">""</span>&gt;</span>二级菜单<span class="tag">&lt;/<span class="name">a</span>&gt;</span></div><div class="line">	  <span class="tag">&lt;<span class="name">ul</span> &gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">""</span>&gt;</span>三级菜单<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">	  <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></div><div class="line">	<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">li</span> &gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">""</span>&gt;</span>一级菜单<span class="tag">&lt;/<span class="name">a</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">ul</span> &gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">li</span>&gt;</span></div><div class="line">	  <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">""</span>&gt;</span>二级菜单<span class="tag">&lt;/<span class="name">a</span>&gt;</span></div><div class="line">	  <span class="tag">&lt;<span class="name">ul</span> &gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">""</span>&gt;</span>三级菜单<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">	  <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></div><div class="line">	<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">li</span>&gt;</span></div><div class="line">	  <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">""</span>&gt;</span>二级菜单<span class="tag">&lt;/<span class="name">a</span>&gt;</span></div><div class="line">	  <span class="tag">&lt;<span class="name">ul</span> &gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">""</span>&gt;</span>三级菜单<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">	  <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></div><div class="line">	<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line"> <span class="tag">&lt;<span class="name">li</span>&gt;</span>一级菜单<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></div></pre></td></tr></table></figure>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">ul</span>&#123;</div><div class="line">  <span class="attribute">background</span>: <span class="number">#000000</span>;<span class="attribute">opacity</span>: <span class="number">0.6</span>;</div><div class="line">  <span class="attribute">font-size</span>: <span class="number">14px</span>;</div><div class="line">  <span class="selector-tag">li</span>&#123;</div><div class="line">    <span class="attribute">position</span>: relative;<span class="attribute">height</span>: <span class="number">20px</span>;<span class="attribute">line-height</span>: <span class="number">20px</span>;<span class="attribute">margin-left</span>: <span class="number">10px</span>;<span class="attribute">cursor</span>: pointer;</div><div class="line">    <span class="attribute">width</span>: <span class="number">100px</span>;</div><div class="line">  &#125;</div><div class="line">  <span class="selector-tag">a</span>&#123;</div><div class="line">    &amp;:hover&#123;<span class="attribute">color</span>:<span class="variable">$mainColor</span>;&#125;</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"><span class="selector-tag">ul</span>&#123;</div><div class="line">  <span class="attribute">display</span>: inline-block;</div><div class="line">  &gt;<span class="selector-tag">li</span>&#123;</div><div class="line">    &gt;<span class="selector-tag">ul</span>&#123;</div><div class="line">      <span class="attribute">display</span>: none;<span class="attribute">position</span>: absolute;<span class="attribute">background</span>: <span class="number">#000000</span>;<span class="attribute">opacity</span>: <span class="number">0.8</span>;</div><div class="line">      <span class="attribute">left</span>: <span class="number">60px</span>;<span class="attribute">top</span>: <span class="number">0</span>;</div><div class="line">    &#125;</div><div class="line">    &amp;:hover&#123;</div><div class="line">      &gt;<span class="selector-tag">ul</span>&#123;<span class="attribute">display</span>: block;&#125;</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/动态menu/" rel="tag">#动态menu</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/08/31/移动端图片垂直居中方案/" rel="next" title="移动端图片垂直居中方案">
+                <i class="fa fa-chevron-left"></i> 移动端图片垂直居中方案
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.jpg"
+               alt="yuexing" />
+          <p class="site-author-name" itemprop="name">yuexing</p>
+          <p class="site-description motion-element" itemprop="description">努力向前，做最好的自己，找到最对的人，一起看最美的风景。</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">6</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              
+                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-name">分类</span>
+              
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#前端开发经常碰到动态menu的开发，比如说，列表页，搜索下拉框等等。。。"><span class="nav-number">1.</span> <span class="nav-text">前端开发经常碰到动态menu的开发，比如说，列表页，搜索下拉框等等。。。</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#鼠标hover第一层，右边弹出第二层，再hover第二层，弹出第三层，依次类推。"><span class="nav-number">1.1.</span> <span class="nav-text">鼠标hover第一层，右边弹出第二层，再hover第二层，弹出第三层，依次类推。</span></a></li></ol></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">yuexing</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.1"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

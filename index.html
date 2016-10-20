@@ -248,6 +248,121 @@
             
               
                 
+                <a class="post-title-link" href="/2016/10/20/menu on hover/" itemprop="url">
+                  鼠标hover弹menu
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-10-20T16:21:27+08:00" content="2016-10-20">
+              2016-10-20
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/menu/" itemprop="url" rel="index">
+                    <span itemprop="name">menu</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h5 id="前端开发经常碰到动态menu的开发，比如说，列表页，搜索下拉框等等。。。"><a href="#前端开发经常碰到动态menu的开发，比如说，列表页，搜索下拉框等等。。。" class="headerlink" title="前端开发经常碰到动态menu的开发，比如说，列表页，搜索下拉框等等。。。"></a>前端开发经常碰到动态menu的开发，比如说，列表页，搜索下拉框等等。。。</h5><h6 id="鼠标hover第一层，右边弹出第二层，再hover第二层，弹出第三层，依次类推。"><a href="#鼠标hover第一层，右边弹出第二层，再hover第二层，弹出第三层，依次类推。" class="headerlink" title="鼠标hover第一层，右边弹出第二层，再hover第二层，弹出第三层，依次类推。"></a>鼠标hover第一层，右边弹出第二层，再hover第二层，弹出第三层，依次类推。</h6><p>需求很简单，当然代码也简单</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">ul</span> &gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">li</span> &gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">""</span>&gt;</span>一级菜单<span class="tag">&lt;/<span class="name">a</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">ul</span> &gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">li</span>&gt;</span></div><div class="line">	  <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span> <span class="attr">target</span>=<span class="string">"_blank"</span>&gt;</span>二级菜单<span class="tag">&lt;/<span class="name">a</span>&gt;</span></div><div class="line">	  <span class="tag">&lt;<span class="name">ul</span> &gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">li</span>&gt;</span></div><div class="line">		  <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span> <span class="attr">target</span>=<span class="string">"_blank"</span>&gt;</span>三级菜单<span class="tag">&lt;/<span class="name">a</span>&gt;</span></div><div class="line">		  <span class="tag">&lt;<span class="name">ul</span> &gt;</span></div><div class="line">			<span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span> <span class="attr">target</span>=<span class="string">"_blank"</span>&gt;</span>四级菜单<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">		  <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></div><div class="line">		<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">	  <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></div><div class="line">	<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">li</span>&gt;</span></div><div class="line">	  <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">""</span>&gt;</span>二级菜单<span class="tag">&lt;/<span class="name">a</span>&gt;</span></div><div class="line">	  <span class="tag">&lt;<span class="name">ul</span> &gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">""</span>&gt;</span>三级菜单<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">	  <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></div><div class="line">	<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">li</span> &gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">""</span>&gt;</span>一级菜单<span class="tag">&lt;/<span class="name">a</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">ul</span> &gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">li</span>&gt;</span></div><div class="line">	  <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">""</span>&gt;</span>二级菜单<span class="tag">&lt;/<span class="name">a</span>&gt;</span></div><div class="line">	  <span class="tag">&lt;<span class="name">ul</span> &gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">""</span>&gt;</span>三级菜单<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">	  <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></div><div class="line">	<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">li</span>&gt;</span></div><div class="line">	  <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">""</span>&gt;</span>二级菜单<span class="tag">&lt;/<span class="name">a</span>&gt;</span></div><div class="line">	  <span class="tag">&lt;<span class="name">ul</span> &gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">""</span>&gt;</span>三级菜单<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">	  <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></div><div class="line">	<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line"> <span class="tag">&lt;<span class="name">li</span>&gt;</span>一级菜单<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></div></pre></td></tr></table></figure>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">ul</span>&#123;</div><div class="line">  <span class="attribute">background</span>: <span class="number">#000000</span>;<span class="attribute">opacity</span>: <span class="number">0.6</span>;</div><div class="line">  <span class="attribute">font-size</span>: <span class="number">14px</span>;</div><div class="line">  <span class="selector-tag">li</span>&#123;</div><div class="line">    <span class="attribute">position</span>: relative;<span class="attribute">height</span>: <span class="number">20px</span>;<span class="attribute">line-height</span>: <span class="number">20px</span>;<span class="attribute">margin-left</span>: <span class="number">10px</span>;<span class="attribute">cursor</span>: pointer;</div><div class="line">    <span class="attribute">width</span>: <span class="number">100px</span>;</div><div class="line">  &#125;</div><div class="line">  <span class="selector-tag">a</span>&#123;</div><div class="line">    &amp;:hover&#123;<span class="attribute">color</span>:<span class="variable">$mainColor</span>;&#125;</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"><span class="selector-tag">ul</span>&#123;</div><div class="line">  <span class="attribute">display</span>: inline-block;</div><div class="line">  &gt;<span class="selector-tag">li</span>&#123;</div><div class="line">    &gt;<span class="selector-tag">ul</span>&#123;</div><div class="line">      <span class="attribute">display</span>: none;<span class="attribute">position</span>: absolute;<span class="attribute">background</span>: <span class="number">#000000</span>;<span class="attribute">opacity</span>: <span class="number">0.8</span>;</div><div class="line">      <span class="attribute">left</span>: <span class="number">60px</span>;<span class="attribute">top</span>: <span class="number">0</span>;</div><div class="line">    &#125;</div><div class="line">    &amp;:hover&#123;</div><div class="line">      &gt;<span class="selector-tag">ul</span>&#123;<span class="attribute">display</span>: block;&#125;</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/08/31/移动端图片垂直居中方案/" itemprop="url">
                   移动端图片垂直居中方案
                 </a>
@@ -861,7 +976,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">5</span>
+              <span class="site-state-item-count">6</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -869,7 +984,7 @@
           
             <div class="site-state-item site-state-categories">
               
-                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-count">5</span>
                 <span class="site-state-item-name">分类</span>
               
             </div>
@@ -878,7 +993,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-count">7</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
