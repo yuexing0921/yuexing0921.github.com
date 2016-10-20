@@ -94,7 +94,7 @@
 <meta property="og:description" content="移动端如何做图片垂直居中？开发过程中，PC那套适配方案放在移动端会有很多兼容性问题，甚至的有的时候需要用js代码去动态调整css，很不方便。
 同事建议用flexbox，参考了flexbox的实现方案，很强大，看完http://caibaojian.com/flexbox-guide.html这个教程基本上就会了
 当然具体实现过程，发现有很多浏览器的标准是不一样的，所以需要做一定程度的兼容，gith">
-<meta property="og:updated_time" content="2016-08-31T05:20:34.933Z">
+<meta property="og:updated_time" content="2016-09-01T12:00:10.051Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="移动端图片垂直居中方案">
 <meta name="twitter:description" content="移动端如何做图片垂直居中？开发过程中，PC那套适配方案放在移动端会有很多兼容性问题，甚至的有的时候需要用js代码去动态调整css，很不方便。
@@ -319,7 +319,7 @@
 <li>[x] less版本：<a href="https://github.com/ProLoser/Flexbox.less" target="_blank" rel="external">https://github.com/ProLoser/Flexbox.less</a></li>
 </ul>
 <p>下面贴个人常用的scss代码，很方便</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line">//scss mixin</div><div class="line">@mixin img-wap-ctn($width:auto,$height:$width,$containerSelect:'&gt;div',$imgSelect:img)&#123;</div><div class="line">    @include size($width,$height);</div><div class="line">    //为了兼容低版本的移动浏览器（比如UC，魅族自带浏览器。。。）</div><div class="line">    #&#123;$containerSelect&#125; &#123;</div><div class="line">        @include size(100%);</div><div class="line">        @include flexbox();</div><div class="line">        @include justify-content(space-between);</div><div class="line">        @include align-items(center);</div><div class="line">        #&#123;$imgSelect&#125;&#123;</div><div class="line">            max-width:100%;max-height:100%;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">//html代码</div><div class="line">&lt;div class="img"&gt;</div><div class="line">    &lt;div&gt;</div><div class="line">        &lt;img src="" alt=""&gt;</div><div class="line">    &lt;/div&gt;</div><div class="line">&lt;/div&gt;</div><div class="line"></div><div class="line">//scss代码</div><div class="line">.img&#123;@include img-wap-ctn(240px);&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line">//scss mixin</div><div class="line">@mixin img-wap-ctn($width:auto,$height:$width,$containerSelect:'&gt;div',$imgSelect:img)&#123;</div><div class="line">    @include size($width,$height);</div><div class="line">    //为了兼容低版本的移动浏览器（比如UC，魅族自带浏览器。。。）</div><div class="line">    #&#123;$containerSelect&#125; &#123;</div><div class="line">        @include size(100%);</div><div class="line">        @include flexbox();</div><div class="line">        @include justify-content(center);</div><div class="line">        @include align-items(center);</div><div class="line">        #&#123;$imgSelect&#125;&#123;</div><div class="line">            max-width:100%;max-height:100%;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">//html代码</div><div class="line">&lt;div class="img"&gt;</div><div class="line">    &lt;div&gt;</div><div class="line">        &lt;img src="" alt=""&gt;</div><div class="line">    &lt;/div&gt;</div><div class="line">&lt;/div&gt;</div><div class="line"></div><div class="line">//scss代码</div><div class="line">.img&#123;@include img-wap-ctn(240px);&#125;</div></pre></td></tr></table></figure>
 <p>上面就是个人常用mixin，很方便，简单明了。</p>
 <blockquote>
 <p>中文flexbox入门教程 <a href="http://caibaojian.com/flexbox-guide.html" target="_blank" rel="external">http://caibaojian.com/flexbox-guide.html</a></p>
@@ -363,6 +363,10 @@
           </div>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/10/20/menu on hover/" rel="prev" title="鼠标hover弹menu">
+                鼠标hover弹menu <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -430,7 +434,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">5</span>
+              <span class="site-state-item-count">6</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -438,7 +442,7 @@
           
             <div class="site-state-item site-state-categories">
               
-                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-count">5</span>
                 <span class="site-state-item-name">分类</span>
               
             </div>
@@ -447,7 +451,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-count">7</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
