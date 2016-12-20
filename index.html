@@ -248,6 +248,115 @@
             
               
                 
+                <a class="post-title-link" href="/2016/12/20/cron/" itemprop="url">
+                  cron
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-12-20T17:31:18+08:00" content="2016-12-20">
+              2016-12-20
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h4 id="1-介绍"><a href="#1-介绍" class="headerlink" title="1.介绍"></a>1.介绍</h4><p>开发过程当中，经常会有定时任务执行，随便一搜，就一堆，下面介绍的是用的最多的<a href="https://github.com/kelektiv/node-cron" target="_blank" rel="external">cron</a>模块，这个模块最早fork于<br><a href="https://github.com/padolsey/cron.js" target="_blank" rel="external"> padolsey/cron.js</a>，语法完全和linux下的cron命令一样。</p>
+<h4 id="2-简单应用"><a href="#2-简单应用" class="headerlink" title="2.简单应用"></a>2.简单应用</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> jobFun = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="keyword">new</span> <span class="built_in">Date</span>());</div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> Job = <span class="built_in">require</span>(<span class="string">"cron"</span>).CronJob;  </div><div class="line"><span class="comment">//每秒钟执行一次  </span></div><div class="line"><span class="keyword">new</span> Job(<span class="string">'* * * * * *'</span>, jobFun , <span class="literal">null</span>, <span class="literal">true</span>, <span class="string">'Asia/Shanghai'</span>); </div><div class="line"></div><div class="line"><span class="comment">//每隔30秒执行一次，会在0秒和30秒处执行  </span></div><div class="line"><span class="keyword">new</span> Job(<span class="string">'*/30 * * * * *'</span>,jobFun , <span class="literal">null</span>, <span class="literal">true</span>, <span class="string">'Asia/Shanghai'</span>);  </div><div class="line"></div><div class="line"><span class="comment">//在每天的00:00:00和02:00:00期间  每半小时执行一次 </span></div><div class="line"><span class="keyword">new</span> Job(<span class="string">'* */30 0-2 * * *'</span>, jobFun , <span class="literal">null</span>, <span class="literal">true</span>, <span class="string">'Asia/Shanghai'</span>);  </div><div class="line"></div><div class="line"><span class="comment">//在每天的00:30:00和12:30:00 各执行一次  </span></div><div class="line"><span class="keyword">new</span> Job(<span class="string">'* 30 0,12 * * *'</span>, jobFun , <span class="literal">null</span>, <span class="literal">true</span>, <span class="string">'Asia/Shanghai'</span>);  </div><div class="line"></div><div class="line"><span class="comment">// 每周一和周五的11:30:00 执行job</span></div><div class="line"><span class="keyword">var</span> job = <span class="keyword">new</span> CronJob(&#123;</div><div class="line">  cronTime: <span class="string">'00 30 11 * * 1-5'</span>,</div><div class="line">  onTick: jobFun,</div><div class="line">  start: <span class="literal">false</span>,</div><div class="line">  timeZone: <span class="string">'Asia/Shanghai'</span></div><div class="line">&#125;);</div><div class="line">job.start();</div></pre></td></tr></table></figure>
+<h4 id="3-API语法-（翻译很渣，看不懂可以看原文）"><a href="#3-API语法-（翻译很渣，看不懂可以看原文）" class="headerlink" title="3.API语法 （翻译很渣，看不懂可以看原文）"></a>3.API语法 （翻译很渣，看不懂可以看<a href="https://github.com/kelektiv/node-cron/blob/master/README.md" target="_blank" rel="external">原文</a>）</h4><ul>
+<li><code>constructor(cronTime, onTick, onComplete, start, timezone, context, runOnInit)</code> - 可以用json格式传参,也可以不用，具体参加例子.<ul>
+<li><code>cronTime</code> - [必需] - 时间格式 (second minute hour dayOfMonth month dayOfWeek).</li>
+<li><code>onTick</code> - [必需] - 执行的function.</li>
+<li><code>onComplete</code> - [可选] - 当onTick执行完成后，执行的函数.</li>
+<li><code>start</code> - [可选] - 是否立即执行onTick函数，默认是false</li>
+<li><code>timeZone</code> - [可选] - 指定时区</li>
+<li><code>context</code> - [可选] - 可以指定上下文，感觉没有啥作用？？</li>
+<li><code>runOnInit</code> - [可选] - 不清楚？？</li>
+</ul>
+</li>
+<li><code>start</code> - Runs your job.</li>
+<li><code>stop</code> - Stops your job.</li>
+</ul>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/11/18/Github/" itemprop="url">
                   GitHub速度慢的解决方案
                 </a>
@@ -1078,7 +1187,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">7</span>
+              <span class="site-state-item-count">8</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -1095,7 +1204,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-count">8</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
