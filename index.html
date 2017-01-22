@@ -248,6 +248,103 @@
             
               
                 
+                <a class="post-title-link" href="/2017/01/22/npm常用命令/" itemprop="url">
+                  npm常用命令
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2017-01-22T14:47:14+08:00" content="2017-01-22">
+              2017-01-22
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="npm-常用命令"><a href="#npm-常用命令" class="headerlink" title="npm 常用命令"></a>npm 常用命令</h1><h4 id="npm-init"><a href="#npm-init" class="headerlink" title="npm init"></a>npm init</h4><h4 id="npm-install"><a href="#npm-install" class="headerlink" title="npm install"></a>npm install</h4><h5 id="npm-install-1"><a href="#npm-install-1" class="headerlink" title="npm install "></a>npm install <packagename></packagename></h5><h5 id="npm-install-D-or-–save-dev"><a href="#npm-install-D-or-–save-dev" class="headerlink" title="npm install  -D or –save-dev"></a>npm install <packagename> -D or –save-dev</packagename></h5><p>会在package.json的devDependencies属性下添加msbuild<br>运行npm install –production或者注明NODE_ENV变量值为production时，不会自动安装msbuild到node_modules目录中</p>
+<h5 id="npm-install-S-or-–save"><a href="#npm-install-S-or-–save" class="headerlink" title="npm install  -S or –save"></a>npm install <packagename> -S or –save</packagename></h5><p>会在package.json的dependencies属性下添加msbuild<br>运行npm install –production或者注明NODE_ENV变量值为production时，不会自动安装msbuild到node_modules目录中</p>
+<h5 id="S-–save-D-–save-dev-O-–save-optional-E-–save-exact-–dry-run"><a href="#S-–save-D-–save-dev-O-–save-optional-E-–save-exact-–dry-run" class="headerlink" title="[-S|–save|-D|–save-dev|-O|–save-optional] [-E|–save-exact] [–dry-run]"></a>[-S|–save|-D|–save-dev|-O|–save-optional] [-E|–save-exact] [–dry-run]</h5><h4 id="npm-update"><a href="#npm-update" class="headerlink" title="npm update"></a>npm update</h4><h5 id="npm-update-1"><a href="#npm-update-1" class="headerlink" title="npm update "></a>npm update <packagename></packagename></h5><h5 id="npm-update-升级指定版本"><a href="#npm-update-升级指定版本" class="headerlink" title="npm update @ 升级指定版本"></a>npm update <packagename>@<version> 升级指定版本</version></packagename></h5><h4 id="删除指定包"><a href="#删除指定包" class="headerlink" title="删除指定包"></a>删除指定包</h4><h5 id="npm-uninstall"><a href="#npm-uninstall" class="headerlink" title="npm uninstall"></a>npm uninstall</h5><h5 id="npm-remove-rm-r-un-unlink"><a href="#npm-remove-rm-r-un-unlink" class="headerlink" title="npm remove, rm, r, un, unlink"></a>npm remove, rm, r, un, unlink</h5><h4 id="npm-config"><a href="#npm-config" class="headerlink" title="npm config"></a>npm config</h4><h5 id="npm-config-ls-获取基本配置信息"><a href="#npm-config-ls-获取基本配置信息" class="headerlink" title="npm config ls 获取基本配置信息"></a>npm config ls 获取基本配置信息</h5><h5 id="npm-config-ls-l-查看所有配置信息"><a href="#npm-config-ls-l-查看所有配置信息" class="headerlink" title="npm config ls -l 查看所有配置信息"></a>npm config ls -l 查看所有配置信息</h5><h5 id="npm-config-set-配置信息"><a href="#npm-config-set-配置信息" class="headerlink" title="npm config set   配置信息"></a>npm config set <config> <config-value> 配置信息</config-value></config></h5><p>######## npm config set registry <a href="http://registry.npm.taobao.org/" target="_blank" rel="external">http://registry.npm.taobao.org/</a></p>
+<p>######## npm config set proxy <a href="http://proxy.com:8081/" target="_blank" rel="external">http://proxy.com:8081/</a></p>
+<h5 id="npm-config-get-获取配置信息"><a href="#npm-config-get-获取配置信息" class="headerlink" title="npm config get   获取配置信息"></a>npm config get <config>  获取配置信息</config></h5><h4 id="查看包的信息"><a href="#查看包的信息" class="headerlink" title="查看包的信息"></a>查看包的信息</h4><h5 id="npm-info"><a href="#npm-info" class="headerlink" title="npm info "></a>npm info <packagename></packagename></h5><h5 id="npm-show"><a href="#npm-show" class="headerlink" title="npm show "></a>npm show <packagename></packagename></h5><h5 id="npm-view"><a href="#npm-view" class="headerlink" title="npm view "></a>npm view <packagename></packagename></h5><h5 id="https-registry-npmjs-org"><a href="#https-registry-npmjs-org" class="headerlink" title="https://registry.npmjs.org/"></a><a href="https://registry.npmjs.org/" target="_blank" rel="external">https://registry.npmjs.org/</a><packagename></packagename></h5><h4 id="获得安装路径"><a href="#获得安装路径" class="headerlink" title="获得安装路径"></a>获得安装路径</h4><h5 id="npm-root-查看当前包的安装路径"><a href="#npm-root-查看当前包的安装路径" class="headerlink" title="npm root 查看当前包的安装路径"></a>npm root 查看当前包的安装路径</h5><h5 id="npm-root-g-查看全局的包的安装路径"><a href="#npm-root-g-查看全局的包的安装路径" class="headerlink" title="npm root -g  查看全局的包的安装路径"></a>npm root -g  查看全局的包的安装路径</h5><h4 id="模块发布过程"><a href="#模块发布过程" class="headerlink" title="模块发布过程"></a>模块发布过程</h4><h5 id="用户登录-npm-adduser"><a href="#用户登录-npm-adduser" class="headerlink" title="用户登录 npm adduser"></a>用户登录 npm adduser</h5><h5 id="发布模块-npm-publish"><a href="#发布模块-npm-publish" class="headerlink" title="发布模块 npm publish"></a>发布模块 npm publish</h5><h4 id="命令详解"><a href="#命令详解" class="headerlink" title="命令详解"></a>命令详解</h4><h5 id="npm-help"><a href="#npm-help" class="headerlink" title="npm help "></a>npm help <packagename></packagename></h5><h5 id="https-npmjs-org-doc"><a href="#https-npmjs-org-doc" class="headerlink" title="https://npmjs.org/doc/"></a><a href="https://npmjs.org/doc/" target="_blank" rel="external">https://npmjs.org/doc/</a></h5>
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/12/20/cron/" itemprop="url">
                   nodejs中的定时调度模块cron
                 </a>
@@ -1187,7 +1284,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">8</span>
+              <span class="site-state-item-count">9</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -1241,7 +1338,7 @@
         <div class="copyright" >
   
   &copy; 
-  <span itemprop="copyrightYear">2016</span>
+  <span itemprop="copyrightYear">2017</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
